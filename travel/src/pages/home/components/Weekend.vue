@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪</div>
       <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
           <div class="item-img-wrapper">
             <img class="item-img" :src="item.imgUrl" />
           </div>
@@ -18,25 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts3/1808/98/5a0c479260258802.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts3/1808/98/5a0c479260258802.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts3/1808/98/5a0c479260258802.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -50,7 +33,7 @@ export default {
   .item-img-wrapper
     overflow: hidden
     height: 0
-    padding-bottom: 26.28%
+    padding-bottom: 37.07%
     .item-img
       width: 100%
   .item-info

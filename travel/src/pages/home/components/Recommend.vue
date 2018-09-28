@@ -2,7 +2,7 @@
 <div>
   <div class="title">热销推荐</div>
   <ul>
-    <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    <li class="item border-bottom" v-for="item of list" :key="item.id">
       <img class="item-img" :src="item.imgUrl" />
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -17,55 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0004',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0005',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0006',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0007',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0008',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        },{
-          id: '0009',
-          imgUrl: 'https://imgs.qunarzz.com/p/tts5/1605/ec/ab66ab8c5d6d52f7.jpg_304x201_20551507.jpg',
-          title: '杭州三日游',
-          desc: '主城区接>杭州西湖游船—灵隐寺—飞来峰—千岛湖—桐庐瑶琳仙境三日游'
-        }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

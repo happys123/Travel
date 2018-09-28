@@ -16,47 +16,13 @@
 <script>
 export default {
     name: 'HomeIcons',
-    data: function() {
-        return {
-            iconList: [{
-                id: '0001',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/attractions.png',
-                desc: '景点门票'
-            },{
-                id: '0002',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/ski.png',
-                desc: '滑雪季'
-            },{
-                id: '0003',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/spring.png',
-                desc: '泡温泉'
-            },{
-                id: '0004',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/zoo.png',
-                desc: '动植物园'
-            },{
-                id: '0005',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/trip.png',
-                desc: '一日游'
-            },{
-                id: '0006',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/ranking.png',
-                desc: '必游榜单'
-            },{
-                id: '0007',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/scenery.png',
-                desc: '自然风光'
-            },{
-                id: '0008',
-                imgUrl: 'https://raw.githubusercontent.com/happys123/Travel/master/travel/src/assets/all.png',
-                desc: '全部'
-            }]
-        }
+    props: {
+        list: Array
     },
     computed: {
         pages () {
             const pages = []
-            this.iconList.forEach((item,index) => {
+            this.list.forEach((item,index) => {
                 const page = Math.floor(index / 8)
                 if (!pages[page]) {
                     pages[page] = []

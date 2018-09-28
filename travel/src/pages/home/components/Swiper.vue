@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <van-swipe :autoplay="3000">
-            <van-swipe-item v-for="item of swiperList" :key="item.id">
+            <van-swipe-item v-for="item of list" :key="item.id">
                 <img class="swiper-img" :src="item.imgUrl" />
             </van-swipe-item>
             <div class="swiper-pagination"  slot="pagination"></div>
@@ -12,6 +12,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+      list: Array
+  },
   data: function() {
       return {
           swiperList: [{
