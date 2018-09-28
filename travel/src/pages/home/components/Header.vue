@@ -5,7 +5,7 @@
         </div>
         <div class="header-input">
             <span class="iconfont">&#xe632;</span>
-            输入城市/景点/游玩主题
+            <input class="search-input" type="text" placeholder="输入城市/景点/游玩主题" />
         </div>
         <router-link to="/city">
             <div class="header-right">
@@ -49,6 +49,12 @@ export default {
             background: #fff
             border-radius: .1rem
             color #ccc
+            .search-input
+                margin-bottom: .08rem
+                width: 90%
+                height: .6rem
+                line-height: .6rem
+                color #666
         .header-right
             width: 1.24rem
             text-align: center
