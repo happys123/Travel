@@ -1,21 +1,30 @@
 <template>
     <div class="icons">
-        <van-swipe>
-            <van-swipe-item v-for="(page, index) of pages" :key="index">
+        <swiper :options="swiperOption" v-if="list.length">
+            <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
                         <img class="icon-img-content" :src="item.imgUrl" />
                     </div>
                     <p class="icon-desc">{{item.desc}}</p>
                 </div>
-            </van-swipe-item>
-        </van-swipe>
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
     </div>
 </template>
 
 <script>
 export default {
     name: 'HomeIcons',
+    data () {
+        return {
+            swiperOption: {
+                pagination: '.swiper-pagination',
+                loop: true
+            }
+        }
+    },
     props: {
         list: Array
     },
@@ -37,11 +46,11 @@ export default {
 
 <style lang="stylus" scoped>
     @import '~styles/varibles.styl'
+    .icons >>> .swiper-pagination-bullet-active
+        background: #ff9300
     .icons
-        overflow: hidden
         height: 0
         padding-bottom: 50%
-        margin-top: .1rem
         .icon
             position: relative
             overflow: hidden

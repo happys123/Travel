@@ -14,17 +14,6 @@ export default {
   name: 'HomeSwiper',
   props: {
       list: Array
-  },
-  data: function() {
-      return {
-          swiperList: [{
-              id: '0001',
-              imgUrl: 'https://img1.qunarzz.com/vc/06/34/b1/de6b421a416effd38e1c94973e.jpg'
-          },{
-              id: '0002',
-              imgUrl: 'https://img1.qunarzz.com/vc/f3/ea/ae/095dd61c09f2797ba9147bd03f.jpg'
-          }]
-      }
   }
 }
 </script>

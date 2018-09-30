@@ -17,10 +17,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'Home',
-  props: {
-      city: String
+  computed: {
+      ...mapState(['city']),
+    //   ...mapGetters(['doubleCity'])
   }
 }
 </script>
@@ -51,12 +53,13 @@ export default {
             color #ccc
             .search-input
                 margin-bottom: .08rem
-                width: 90%
+                width: 85%
                 height: .6rem
                 line-height: .6rem
                 color #666
         .header-right
-            width: 1.24rem
+            min-width: 1.04rem
+            padding: 0 .1rem
             text-align: center
             color: #fff
             .arrow-icon

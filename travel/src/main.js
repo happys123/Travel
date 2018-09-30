@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import Vant from 'vant';
+import store from './store'
 import 'vant/lib/vant-css/index.css';
 import 'styles/reset.css'
 import 'styles/border.css'
@@ -21,6 +22,7 @@ Vue.use(Vant)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
