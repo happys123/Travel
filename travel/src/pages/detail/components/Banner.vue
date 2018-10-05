@@ -1,32 +1,38 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="" />
+      <img class="banner-img" :src="bannerImg" />
       <div class="banner-info">
-        <p class="banner-tittle">大连</p>
+        <p class="banner-tittle">{{this.sightName}}</p>
         <p class="banner-number">
           <span class="iconfont banner-icon">&#xe796;</span>
-          39
+          {{this.bannerImgs.length}}
         </p>
       </div>
     </div>
-    <common-gallary 
-    :imgs="imgs" 
-    v-show="showGallary"
-    @close="handleGallaryClose"
-    ></common-gallary>
+    <fade-animation>
+      <common-gallary 
+      :imgs="bannerImgs" 
+      v-show="showGallary"
+      @close="handleGallaryClose"
+      ></common-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
   data () {
     return {
       showGallary: false,
-      imgs: ['https://y.gtimg.cn/mediastyle/yqq/img/bg_profile.jpg?max_age=2592000&v=3f6c7d8d08cdab52c2b134f5792fe738', 
-          'https://y.gtimg.cn/mediastyle/yqq/img/bg_profile.jpg?max_age=2592000&v=3f6c7d8d08cdab52c2b134f5792fe738']
     }
   },
   methods: {
@@ -38,7 +44,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   }
 }
 </script>
