@@ -9,12 +9,12 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'https://happys123.github.io/Travel/travel/dist/static/mock',
+    assetsPublicPath: '/',
     proxyTable: {
       '/api': {
         target: 'http://localhost:8080',
         pathRewrite: {
-          '^/api': 'https://happys123.github.io/Travel/travel/dist/static/mock'
+          '^/api': '/static/mock'
         }
       }
     },
