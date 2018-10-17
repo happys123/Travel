@@ -39,7 +39,7 @@ export default {
   activated () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  deactivated () {      //对全局变量解绑
     window.removeEventListener('scroll', this.handleScroll)
   }
 }

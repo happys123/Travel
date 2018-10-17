@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import Vant from 'vant';
+import 'babel-polyfill'
 import store from './store'
 import 'vant/lib/vant-css/index.css';
 import 'styles/reset.css'

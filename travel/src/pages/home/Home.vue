@@ -20,7 +20,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'Home',
   components: {
-    HomeHeader: HomeHeader,
+    HomeHeader: HomeHeader,   //当页面大时可改为() => import('./components/Header')来实现异步加载
     HomeSwiper,
     HomeIcons,
     HomeRecommend,
